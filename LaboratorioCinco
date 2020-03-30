@@ -1,0 +1,92 @@
+//Main
+
+package laboratoriocinco;
+
+/**
+ *
+ * @author hp
+ */
+public class LaboratorioCinco{
+
+    public static void main(String arg[]) { 
+        
+        Persona pavaroti = new Persona(); 
+        hacerCantar(pavaroti); 
+       
+        Canario piolin = new Canario(); 
+        hacerCantar(piolin); 
+        
+        Burro burroDeShrek = new Burro();
+        hacerCantar(burroDeShrek);
+    } 
+
+    public static void hacerCantar(IPuedeCantar cantor) { 
+        
+        cantor.cantar();
+        
+    } 
+}
+    
+//Interfaz
+	package laboratoriocinco;
+/**
+ *
+ * @author hp
+ */
+public interface IPuedeCantar {
+    
+    public  void cantar();
+    
+}
+
+//CLASE PERSONA
+package laboratoriocinco;
+
+/**
+ *
+ * @author hp
+ */
+public class Persona implements IPuedeCantar { 
+
+    @Override
+    public void cantar() { 
+        
+        System.out.println("do re mi fa sol la si"); 
+        
+    } 
+}
+
+//CLASE CANARIO
+
+package laboratoriocinco;
+
+/**
+ *
+ * @author hp
+ */
+public class Canario implements IPuedeCantar { 
+    
+    @Override
+    public void cantar() { 
+        
+	  System.out.println("pio pio pio"); 
+          
+    } 
+}
+
+//CLASE  BURRO 	
+package laboratoriocinco;
+
+/**
+ *
+ * @author hp
+ */
+public class Burro implements IPuedeCantar { 
+    
+    @Override
+    public void cantar() { 
+        
+	  System.out.println("Uribe es el mejor presidente que ha tenido colombia"); 
+          
+    } 
+}
